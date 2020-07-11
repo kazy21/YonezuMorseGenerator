@@ -4,6 +4,6 @@ setup:
           as: DATABASE
 build:
     docker:
-        web: ./docker/php/Dockerfile
+        web: ../docker/php/Dockerfile
 run:
     web: vendor/bin/heroku-php-apache2 public/
