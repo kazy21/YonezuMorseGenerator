@@ -68,7 +68,7 @@
                 this.codes = return_codes.data;
             },
             twitterShare: function() {
-                var url = `https://twitter.com/intent/tweet?text=${this.codes}`;
+                var url = `https://twitter.com/intent/tweet?text=${this.codes}&url=https://yonezu-morse-generator.herokuapp.com/`;
                 window.open(url, '_blank', 'noopener');
             }
         },

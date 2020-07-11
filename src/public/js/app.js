@@ -2023,7 +2023,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       return generate;
     }(),
     twitterShare: function twitterShare() {
-      var url = "https://twitter.com/intent/tweet?text=".concat(this.codes);
+      var url = "https://twitter.com/intent/tweet?text=".concat(this.codes, "&url=https://yonezu-morse-generator.herokuapp.com/");
       window.open(url, '_blank', 'noopener');
     }
   },
