@@ -3,7 +3,7 @@ setup:
         - plan: heroku-postgresql
           as: DATABASE
 build:
-    docker:
-        web: $PWD/docker/php/Dockerfile
+    languages:
+        - php
 run:
     web: vendor/bin/heroku-php-apache2 public/
