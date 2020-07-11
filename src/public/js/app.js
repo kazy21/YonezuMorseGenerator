@@ -2024,7 +2024,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }(),
     twitterShare: function twitterShare() {
       var url = "https://twitter.com/intent/tweet?text=".concat(this.codes);
-      location.href = url;
+      window.open(url, '_blank', 'noopener');
     }
   },
   watch: {

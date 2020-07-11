@@ -69,7 +69,7 @@
             },
             twitterShare: function() {
                 var url = `https://twitter.com/intent/tweet?text=${this.codes}`;
-                location.href = url
+                window.open(url, '_blank', 'noopener');
             }
         },
         watch: {
