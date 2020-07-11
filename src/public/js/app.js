@@ -39091,7 +39091,7 @@ var render = function() {
                     [
                       _c("p", { staticClass: "title" }, [
                         _vm._v(
-                          "\n                        YonezuMorseGenerator\n                    "
+                          "\n                        YonezuMorseGenerator | 米津玄師のモールス信号生成サイト\n                    "
                         )
                       ]),
                       _vm._v(" "),

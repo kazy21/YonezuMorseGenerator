@@ -5,7 +5,7 @@
                 <v-row>
                     <v-col cols="12">
                         <p class="title">
-                            YonezuMorseGenerator
+                            YonezuMorseGenerator | 米津玄師のモールス信号生成サイト
                         </p>
                         <p>
                             半角英数字の入力のみ有効となります。(Only single-byte alphanumeric characters are allowed.)
