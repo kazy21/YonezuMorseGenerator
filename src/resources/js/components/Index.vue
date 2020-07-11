@@ -7,34 +7,34 @@
                         <p class="title">
                             YonezuMorseGenerator
                         </p>
+                        <p>
+                            半角英数字の入力のみ有効となります。(Only single-byte alphanumeric characters are allowed.)
+                        </p>
                         <v-text-field
                             type="text"
+                            outlined
                             v-model="enter_words"
                             label="Enter phrase here"
                             :rules="[rules.required]"
                         />
                         <template v-if="words && codes">
-                            <v-card outlined>
-                                <v-list dense>
-                                    <v-list-item>
-                                        <v-list-item-content>
-                                            <v-list-item-subtitle v-html="'Input:'"></v-list-item-subtitle>
-                                            <v-list-item-title v-html="words"></v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                    <v-list-item>
-                                        <v-list-item-content>
-                                            <v-list-item-subtitle v-html="'Output:'"></v-list-item-subtitle>
-                                            <v-list-item-title v-html="codes"></v-list-item-title>
-                                        </v-list-item-content>
-                                    </v-list-item>
-                                </v-list>
+                            <v-card outlined class="pa-3">
+                                <p class="font-weight-bold">Input:</p>
+                                <p>{{ words }}</p>
+                                <p class="font-weight-bold">Output:</p>
+                                <p>{{ codes }}</p>    
                                 <v-card-actions>
                                     <v-btn @click="twitterShare()" depressed block class="white--text" color="#1DA1F2">
                                         <v-icon>mdi-twitter</v-icon>
                                         Share
                                     </v-btn>
                                 </v-card-actions>
+                            </v-card>
+                        </template>
+                        <template v-else>
+                            <v-card outlined class="pa-3">
+                                <p class="font-weight-bold">404 NOT FOUND</p>
+                                <p>Sorry, you're straysheep. That's all we know.</p>
                             </v-card>
                         </template>
                     </v-col>

@@ -39095,9 +39095,16 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
+                      _c("p", [
+                        _vm._v(
+                          "\n                        半角英数字の入力のみ有効となります。(Only single-byte alphanumeric characters are allowed.)\n                    "
+                        )
+                      ]),
+                      _vm._v(" "),
                       _c("v-text-field", {
                         attrs: {
                           type: "text",
+                          outlined: "",
                           label: "Enter phrase here",
                           rules: [_vm.rules.required]
                         },
@@ -39114,62 +39121,19 @@ var render = function() {
                         ? [
                             _c(
                               "v-card",
-                              { attrs: { outlined: "" } },
+                              { staticClass: "pa-3", attrs: { outlined: "" } },
                               [
-                                _c(
-                                  "v-list",
-                                  { attrs: { dense: "" } },
-                                  [
-                                    _c(
-                                      "v-list-item",
-                                      [
-                                        _c(
-                                          "v-list-item-content",
-                                          [
-                                            _c("v-list-item-subtitle", {
-                                              domProps: {
-                                                innerHTML: _vm._s("Input:")
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("v-list-item-title", {
-                                              domProps: {
-                                                innerHTML: _vm._s(_vm.words)
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        )
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "v-list-item",
-                                      [
-                                        _c(
-                                          "v-list-item-content",
-                                          [
-                                            _c("v-list-item-subtitle", {
-                                              domProps: {
-                                                innerHTML: _vm._s("Output:")
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("v-list-item-title", {
-                                              domProps: {
-                                                innerHTML: _vm._s(_vm.codes)
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        )
-                                      ],
-                                      1
-                                    )
-                                  ],
-                                  1
-                                ),
+                                _c("p", { staticClass: "font-weight-bold" }, [
+                                  _vm._v("Input:")
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [_vm._v(_vm._s(_vm.words))]),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "font-weight-bold" }, [
+                                  _vm._v("Output:")
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [_vm._v(_vm._s(_vm.codes))]),
                                 _vm._v(" "),
                                 _c(
                                   "v-card-actions",
@@ -39204,7 +39168,23 @@ var render = function() {
                               1
                             )
                           ]
-                        : _vm._e()
+                        : [
+                            _c(
+                              "v-card",
+                              { staticClass: "pa-3", attrs: { outlined: "" } },
+                              [
+                                _c("p", { staticClass: "font-weight-bold" }, [
+                                  _vm._v("404 NOT FOUND")
+                                ]),
+                                _vm._v(" "),
+                                _c("p", [
+                                  _vm._v(
+                                    "Sorry, you're straysheep. That's all we know."
+                                  )
+                                ])
+                              ]
+                            )
+                          ]
                     ],
                     2
                   )
