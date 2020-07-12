@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix' => 'get'], function () {
+    Route::get('getList', 'AppController@getList');
     Route::post('generate', 'AppController@generate');
 });

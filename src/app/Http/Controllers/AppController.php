@@ -7,6 +7,11 @@ use App\Code;
 
 class AppController extends Controller
 {
+    function getList() {
+        $codes = Code::all();
+        return $codes;
+    }
+
     function generate() {
         $words = request('words'); //入力を取得
         $codes = '';
